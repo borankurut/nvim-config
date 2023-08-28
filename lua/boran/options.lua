@@ -24,6 +24,7 @@ vim.opt.relativenumber = true
 vim.opt.wrap = false
 
 vim.opt.cursorline = true
+
 --set the hexadecimal color for line highlighting
 vim.cmd [[
     hi CursorLine ctermbg=20 guibg=#1f1f1f

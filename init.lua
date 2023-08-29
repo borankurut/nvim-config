@@ -6,6 +6,7 @@ require	"boran.commands"
 require "boran.lsp"
 require "boran.telescope"
 require "boran.treesitter"
+require "boran.autopairs"
 
 vim.cmd "colorscheme gruvbox"
 

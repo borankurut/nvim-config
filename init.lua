@@ -8,6 +8,7 @@ require "boran.telescope"
 require "boran.treesitter"
 require "boran.autopairs"
 require "boran.comment"
+require "boran.gitsigns"
 
 vim.cmd "colorscheme gruvbox"
 

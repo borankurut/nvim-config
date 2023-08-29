@@ -15,6 +15,10 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<M-l>", "<C-w>l", opts)
 
+--file navigation
+keymap("n", "<C-k>", "<C-u>", opts)
+keymap("n", "<C-j>", "<C-d>", opts)
+
 --explorer window
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 

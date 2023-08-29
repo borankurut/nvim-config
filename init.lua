@@ -9,6 +9,7 @@ require "boran.treesitter"
 require "boran.autopairs"
 require "boran.comment"
 require "boran.gitsigns"
+require "boran.nvim-tree"
 
 vim.cmd "colorscheme gruvbox"
 

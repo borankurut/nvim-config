@@ -20,7 +20,7 @@ keymap("n", "<C-k>", "<C-u>", opts)
 keymap("n", "<C-j>", "<C-d>", opts)
 
 --explorer window
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 --escape jk
 keymap("i", "jk", "<ESC>", opts)

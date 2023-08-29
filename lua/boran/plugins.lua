@@ -81,6 +81,15 @@ return packer.startup(function(use)
 
     use "p00f/nvim-ts-rainbow" --rainbow brackets
 
+	--nvimtree
+	use "nvim-tree/nvim-web-devicons"
+
+	use{
+		"nvim-tree/nvim-tree.lua",
+		tag = "compat-nvim-0.7"
+	}
+
+
 	use "lewis6991/gitsigns.nvim"
 
     -- Automatically set up your configuration after cloning packer.nvim

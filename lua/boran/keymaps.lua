@@ -15,6 +15,10 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<M-l>", "<C-w>l", opts)
 
+--buffer navigation
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
 --file navigation
 keymap("n", "<C-k>", "<C-u>", opts)
 keymap("n", "<C-j>", "<C-d>", opts)

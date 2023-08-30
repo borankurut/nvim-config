@@ -24,4 +24,5 @@ require "boran.comment"
 require "boran.gitsigns"
 require "boran.nvim-tree"
 require "boran.bufferline"
+require "boran.rainbow-delimiters"
 

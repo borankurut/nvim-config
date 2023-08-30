@@ -18,6 +18,7 @@ keymap("n", "<M-l>", "<C-w>l", opts)
 --buffer navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
 --file navigation
 keymap("n", "<C-k>", "<C-u>", opts)

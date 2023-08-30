@@ -11,9 +11,10 @@ vim.g.maplocalleader = " "
 
 --window navigation
 keymap("n", "<M-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<M-l>", "<C-w>l", opts)
+
+--[[ keymap("n", "<C-j>", "<C-w>j", opts) ]]
+--[[ keymap("n", "<C-k>", "<C-w>k", opts) ]]
 
 --buffer navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)

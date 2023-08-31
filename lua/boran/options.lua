@@ -12,6 +12,9 @@ vim.cmd [[
   highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 ]]
 
+-- remove ~
+vim.opt.fillchars = { eob = ' ' }
+
 --reduce sign column size
 vim.o.signcolumn = "number"
 

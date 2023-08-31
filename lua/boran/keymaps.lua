@@ -56,6 +56,12 @@ keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 --paste won't copy
 keymap("v", "p", '"_dP', opts)
 
+-- Remap delete commands to use the black hole register
+vim.api.nvim_set_keymap('n', 'd', '"_d', { noremap = true })
+vim.api.nvim_set_keymap('n', 'D', '"_D', { noremap = true })
+vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true })
+
+
 --prettier
 keymap("n", "<leader>p", ":Format<cr>", opts)
 

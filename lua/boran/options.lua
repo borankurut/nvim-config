@@ -10,6 +10,9 @@ vim.opt.number = false
 vim.cmd [[
   highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+  autocmd CursorMoved * set nohlsearch
+  nnoremap n n:set hlsearch<cr>
 ]]
 
 -- remove ~

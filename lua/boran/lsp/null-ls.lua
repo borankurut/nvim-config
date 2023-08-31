@@ -17,3 +17,8 @@ null_ls.setup({
 		-- diagnostics.flake8
 	},
 })
+
+local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+

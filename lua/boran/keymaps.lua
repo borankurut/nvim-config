@@ -56,3 +56,6 @@ keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 --paste won't copy
 keymap("v", "p", '"_dP', opts)
 
+--prettier
+keymap("n", "<leader>p", ":Format<cr>", opts)
+

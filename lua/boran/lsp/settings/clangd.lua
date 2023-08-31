@@ -1,6 +1,6 @@
 return {
 	default_config = {
-		cmd = { "clangd", "--offset-encoding=utf-16" },
+		cmd = { "clangd" },
 		filetypes = { "c", "cpp", "h" },
 	},
 }

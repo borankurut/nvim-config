@@ -68,3 +68,6 @@ keymap("n", "<leader>p", ":Format<cr>", opts)
 --save file by leader s.
 keymap("n", "<leader>s", ":w<cr>", opts)
 
+--redo 
+keymap("n", "r", "<C-r>", opts)
+

@@ -82,9 +82,6 @@ M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
-	if client.name == "clangd" then
-		client.server.capabilities.offsetEncoding = "utf-8"
-	end
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
 end
@@ -92,6 +89,7 @@ end
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if status_ok then
 	M.capabilities = cmp_nvim_lsp.default_capabilities()
+	M.capabilities.offsetEncoding = "utf-8" --cpp encoding bug.
 end
 
 return M

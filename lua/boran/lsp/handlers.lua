@@ -79,11 +79,14 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
+	lsp_keymaps(bufnr)
+	lsp_highlight_document(client)
+
+	print("helloe")
+
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
-	lsp_keymaps(bufnr)
-	lsp_highlight_document(client)
 end
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")

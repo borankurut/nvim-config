@@ -13,6 +13,8 @@ vim.cmd [[
 
   autocmd CursorMoved * set nohlsearch
   nnoremap n n:set hlsearch<cr>
+
+  set guicursor=n-v-c-i:block
 ]]
 
 -- remove ~
@@ -35,7 +37,7 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 vim.opt.undofile = true -- records history, don't do frequent changes to large files
 
-vim.opt.updatetime = 600
+vim.opt.updatetime = 300
 
 vim.opt.softtabstop=4
 vim.opt.tabstop = 4

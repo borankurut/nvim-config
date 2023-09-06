@@ -6,6 +6,26 @@ end
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<M-;>]],
+
+	--disable terminal status.
+	on_open = function(term)
+		local success, error_message = pcall(function()
+			vim.api.nvim_set_option("laststatus", 0)
+		end)
+		if not success then
+			print("Error in on_open(toggleterm):", error_message)
+		end
+	end,
+
+	on_close = function(term)
+		local success, error_message = pcall(function()
+			vim.api.nvim_set_option("laststatus", 2)
+		end)
+		if not success then
+			print("Error in on_close(toggleterm):", error_message)
+		end
+	end,
+
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,

@@ -24,6 +24,8 @@ keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 --file navigation
 keymap("n", "<C-k>", "<C-u>", opts)
 keymap("n", "<C-j>", "<C-d>", opts)
+keymap("v", "<C-k>", "<C-u>", opts)
+keymap("v", "<C-j>", "<C-d>", opts)
 
 --explorer window
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)

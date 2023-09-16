@@ -1,6 +1,6 @@
 require('specs').setup{ 
     show_jumps  = true,
-    min_jump = 10,
+    min_jump = 15,
     popup = {
         delay_ms = 0, -- delay before popup displays
         inc_ms = 10, -- time increments used for fade/resize effects 

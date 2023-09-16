@@ -22,10 +22,14 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
 --file navigation
-keymap("n", "<C-k>", "<C-u>", opts)
-keymap("n", "<C-j>", "<C-d>", opts)
 keymap("v", "<C-k>", "<C-u>", opts)
 keymap("v", "<C-j>", "<C-d>", opts)
+
+keymap('n', '<C-k>', '<C-u>:lua require("specs").show_specs()<CR>', { noremap = true, silent = true })
+keymap('n', '<C-j>', '<C-d>:lua require("specs").show_specs()<CR>', { noremap = true, silent = true })
+
+keymap('n', 'n', 'n:lua require("specs").show_specs()<CR>', { noremap = true, silent = true })
+keymap('n', 'N', 'N:lua require("specs").show_specs()<CR>', { noremap = true, silent = true })
 
 --explorer window
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)

@@ -106,6 +106,10 @@ return packer.startup(function(use)
 	--terminal
 	use "akinsho/toggleterm.nvim"
 
+
+	--cursor animation
+	use {'edluffy/specs.nvim'}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

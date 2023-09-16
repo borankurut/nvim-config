@@ -48,7 +48,7 @@ vim.opt.relativenumber = false
 
 vim.opt.wrap = false
 
-vim.opt.cursorline = true
+--vim.opt.cursorline = true
 
 --set the hexadecimal color for line highlighting
 vim.cmd [[

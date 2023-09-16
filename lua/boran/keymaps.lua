@@ -73,3 +73,5 @@ keymap("n", "<leader>s", ":w<cr>", opts)
 --redo 
 keymap("n", "r", "<C-r>", opts)
 
+keymap("n", "<leader>v", ":vsplit<cr>", opts)
+

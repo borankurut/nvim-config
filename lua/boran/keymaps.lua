@@ -51,7 +51,7 @@ keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 --vim.keymap.set("n", "<leader>J", builtin.git_files, {})
 --vim.keymap.set("n", "<leader>f", builtin.live_grep, {})
 keymap("n", "<leader>j", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<leader>J", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader>h", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 
 

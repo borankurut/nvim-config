@@ -22,8 +22,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
 --file navigation
-keymap('n', '<C-k>', ':normal! 10k<CR>', opts)
-keymap("n", "<C-j>", ":normal! 10j<CR>", opts)
+keymap("n", "<C-k>", "<C-u>", opts)
+keymap("n", "<C-j>", "<C-d>", opts)
 keymap("v", "<C-k>", "<C-u>", opts)
 keymap("v", "<C-j>", "<C-d>", opts)
 

@@ -39,7 +39,7 @@ vim.opt.undofile = true -- records history, don't do frequent changes to large f
 
 vim.opt.updatetime = 300
 
-vim.opt.softtabstop=4
+vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 

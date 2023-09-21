@@ -110,6 +110,9 @@ return packer.startup(function(use)
 	--cursor animation
 	use {'edluffy/specs.nvim'}
 
+	-- for c# projects
+	use {'OmniSharp/omnisharp-vim'}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

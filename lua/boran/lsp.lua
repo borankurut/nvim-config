@@ -10,6 +10,7 @@ lsp.on_attach(function(client, bufnr)
 
 	vim.keymap.set('n', 'gk', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
 	vim.keymap.set('n', 'gl', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+	vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 	-- more keybindings...
 end)
 

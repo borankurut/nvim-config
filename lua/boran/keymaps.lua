@@ -22,8 +22,17 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
 --file navigation
-keymap("n", "<C-k>", "<C-u>", opts)
-keymap("n", "<C-j>", "<C-d>", opts)
+-- Create a custom function to execute zz and move up 5 lines
+function CenterAndMoveUp()
+  -- Execute zz to center the screen
+  vim.cmd('normal! zz')
+  -- Move up 5 lines
+  vim.cmd('normal! 5k')
+end
+
+keymap("n", "<C-k>", ":<C-u> lua CenterAndMoveUp()<CR>", opts)
+keymap("n", "<C-j>", [[:execute "normal! \<C-d>" | lua CenterAndMoveUp()<CR>]], opts)
+
 keymap("v", "<C-k>", "<C-u>", opts)
 keymap("v", "<C-j>", "<C-d>", opts)
 

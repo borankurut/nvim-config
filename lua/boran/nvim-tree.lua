@@ -45,7 +45,7 @@ nvim_tree.setup {
     "alpha",
   },
   open_on_tab = false,
-  hijack_cursor = false,
+  hijack_cursor = true,
   update_cwd = true,
   diagnostics = {
     enable = true,
@@ -96,7 +96,7 @@ nvim_tree.setup {
   },
   actions = {
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       window_picker = {
         enable = false,
       },

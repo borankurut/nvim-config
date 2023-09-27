@@ -1,6 +1,6 @@
 local lsp = require('lsp-zero').preset({
 	name = 'minimal',
-	set_lsp_keymaps = true,
+	set_lsp_keymaps = {omit = {'<C-k>'}}, --C-k used for navigation
 	manage_nvim_cmp = true,
 	suggest_lsp_servers = false,
 })

@@ -1,7 +1,6 @@
 vim.cmd "colorscheme gruvbox"
 
 require "boran.options"
-require "boran.keymaps"
 require "boran.plugins"
 require "boran.commands"
 require "boran.lsp"
@@ -15,3 +14,5 @@ require "boran.bufferline"
 require "boran.rainbow-delimiters"
 require "boran.toggleterm"
 
+require "boran.keymaps"
+require "boran.neovide"

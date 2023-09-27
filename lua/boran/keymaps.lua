@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_ops = { silent = true }
-
 local keymap = vim.api.nvim_set_keymap
 
 --make leader key space
@@ -34,8 +32,8 @@ function CenterAndMoveDown()
   vim.cmd('normal! 5j')
 end
 
-keymap("n", "<C-k>", ":<C-u> lua CenterAndMoveUp()<CR>", opts)
-keymap("n", "<C-j>", [[:execute "normal! \<C-d>" | lua CenterAndMoveDown()<CR>]], opts) -- written this way to prevent command mode ctrl-j.
+keymap("n", "<C-k>", "<C-u>:lua CenterAndMoveUp()<CR>", opts)
+keymap("n", "<C-j>", "<C-d>:lua CenterAndMoveDown()<CR>", opts)
 
 keymap("v", "<C-k>", "<C-u>", opts)
 keymap("v", "<C-j>", "<C-d>", opts)

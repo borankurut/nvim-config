@@ -12,16 +12,16 @@ if vim.g.neovide then
 		end
 	end
 
-	vim.g.neovide_transparency = 0.8
+	vim.g.neovide_transparency = 0.85
 	vim.g.neovide_cursor_vfx_mode = "pixiedust"
 
 	vim.g.neovide_fullscreen = true
-	vim.keymap.set("n", "<F11>", toggle_fullscreen, { silent = true })
-	vim.keymap.set("n", "<C-j>", "<Nop>", { silent = true })
-	vim.keymap.set("n", "<C-k>", "<Nop>", { silent = true })
-
-	vim.keymap.set("n", "<C-k>", "<C-u>", { silent = true })
-	vim.keymap.set("n", "<C-j>", "<C-d>", { silent = true })
+	vim.keymap.set("n", "<A-Enter>", toggle_fullscreen, { silent = true })
+	--[[ vim.keymap.set("n", "<C-j>", "<Nop>", { silent = true }) ]]
+	--[[ vim.keymap.set("n", "<C-k>", "<Nop>", { silent = true }) ]]
+	--[[]]
+	--[[ vim.keymap.set("n", "<C-k>", "<C-u>", { silent = true }) ]]
+	--[[ vim.keymap.set("n", "<C-j>", "<C-d>", { silent = true }) ]]
 
 	vim.g.neovide_refresh_rate = 144
 

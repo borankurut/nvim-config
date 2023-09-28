@@ -12,8 +12,9 @@ if vim.g.neovide then
 		end
 	end
 
-	vim.g.neovide_transparency = 0.85
+	vim.g.neovide_transparency = 0.88
 	vim.g.neovide_cursor_vfx_mode = "pixiedust"
+	vim.g.neovide_cursor_trail_size = 0.5
 
 	vim.g.neovide_fullscreen = true
 	vim.keymap.set("n", "<A-Enter>", toggle_fullscreen, { silent = true })

@@ -77,6 +77,7 @@ vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true })
 
 --prettier
 vim.keymap.set("n", "<leader>p", vim.lsp.buf.format)
+keymap("n", "<leader>[", ":PrettyCurly<CR>", opts)
 
 --save file by leader s.
 keymap("n", "<leader>s", ":w<cr>", opts)

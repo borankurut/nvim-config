@@ -42,10 +42,10 @@ packer.init {
 return packer.startup(function(use)
 	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
-	use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
-	use "windwp/nvim-autopairs"  --autoparis
-	use "numToStr/Comment.nvim"  -- comment thingy.
+	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+	use "windwp/nvim-autopairs" --autoparis
+	use "numToStr/Comment.nvim" -- comment thingy.
 	use "JoosepAlviste/nvim-ts-context-commentstring"
 
 	use "morhetz/gruvbox" --colorscheme
@@ -56,8 +56,8 @@ return packer.startup(function(use)
 		branch = 'v1.x',
 		requires = {
 			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },   -- Required
-			{ 'williamboman/mason.nvim' }, -- Optional
+			{ 'neovim/nvim-lspconfig' },    -- Required
+			{ 'williamboman/mason.nvim' },  -- Optional
 			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
 			-- Autocompletion
@@ -69,7 +69,7 @@ return packer.startup(function(use)
 			{ 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
 			-- Snippets
-			{ 'L3MON4D3/LuaSnip' },   -- Required
+			{ 'L3MON4D3/LuaSnip' },    -- Required
 			{ 'rafamadriz/friendly-snippets' }, -- Optional
 		}
 	}
@@ -108,10 +108,18 @@ return packer.startup(function(use)
 
 
 	--cursor animation
-	use {'edluffy/specs.nvim'}
+	use { 'edluffy/specs.nvim' }
 
 	-- for c# projects
-	use {'OmniSharp/omnisharp-vim'}
+	use { 'OmniSharp/omnisharp-vim' }
+
+	--to access recent files
+	use {
+		'goolord/alpha-nvim',
+		config = function()
+			require 'alpha'.setup(require 'alpha.themes.startify'.config)
+		end
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

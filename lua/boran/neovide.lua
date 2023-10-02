@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.opt.guifont = "JetBrainsMono Nerd Font"
+	vim.opt.guifont = {"JetBrainsMono Nerd Font", ":h12"}
 	vim.g.remember_window_size = true
 	vim.g.remember_window_position = true
 

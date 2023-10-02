@@ -55,3 +55,5 @@ vim.cmd [[
     hi CursorLine ctermbg=20 guibg=#1f1f1f
 ]]
 
+vim.cmd('set autochdir')
+

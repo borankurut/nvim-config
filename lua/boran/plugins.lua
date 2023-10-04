@@ -100,7 +100,6 @@ return packer.startup(function(use)
 	use "lewis6991/gitsigns.nvim"
 
 	--tabs
-	use "akinsho/bufferline.nvim"
 	use "moll/vim-bbye"
 
 	--terminal
@@ -120,6 +119,10 @@ return packer.startup(function(use)
 			require 'alpha'.setup(require 'alpha.themes.startify'.config)
 		end
 	}
+
+
+	--harpoon
+	use { 'ThePrimeagen/harpoon' }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

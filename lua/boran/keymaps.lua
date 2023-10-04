@@ -14,11 +14,6 @@ keymap("n", "<M-l>", "<C-w>l", opts)
 --[[ keymap("n", "<C-j>", "<C-w>j", opts) ]]
 --[[ keymap("n", "<C-k>", "<C-w>k", opts) ]]
 
---buffer navigation
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
-
 --file navigation
 
 -- Create a custom function to execute zz and move 5 lines
@@ -62,7 +57,7 @@ keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 --vim.keymap.set("n", "<leader>J", builtin.git_files, {})
 --vim.keymap.set("n", "<leader>f", builtin.live_grep, {})
 keymap("n", "<leader>j", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<leader>h", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader>J", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 
 
@@ -90,3 +85,12 @@ keymap("n", "r", "<C-r>", opts)
 
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
 
+--tabs
+keymap("n", "<leader>h", "<cmd>lua require'harpoon.ui'.toggle_quick_menu()<cr>", opts)
+keymap("n", "<leader>a", "<cmd>lua require'harpoon.mark'.add_file()<cr>", opts)
+
+keymap("n", '<leader>1', "<cmd>lua require'harpoon.ui'.nav_file(1)<cr>", opts)
+keymap("n", '<leader>2', "<cmd>lua require'harpoon.ui'.nav_file(2)<cr>", opts)
+keymap("n", '<leader>3', "<cmd>lua require'harpoon.ui'.nav_file(3)<cr>", opts)
+keymap("n", '<leader>4', "<cmd>lua require'harpoon.ui'.nav_file(4)<cr>", opts)
+keymap("n", '<leader>5', "<cmd>lua require'harpoon.ui'.nav_file(5)<cr>", opts)

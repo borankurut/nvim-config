@@ -43,6 +43,8 @@ vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.o.autochdir = false
+
 vim.opt.number = true
 vim.opt.relativenumber = false
 
@@ -54,4 +56,5 @@ vim.opt.cursorline = true
 vim.cmd [[
     hi CursorLine ctermbg=20 guibg=#1f1f1f
 ]]
+
 

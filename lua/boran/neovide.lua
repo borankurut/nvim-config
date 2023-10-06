@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.opt.guifont = {"JetBrains Mono", ":h12"}
+	vim.opt.guifont = { "JetBrains Mono", ":h12" }
 	vim.g.remember_window_size = true
 	vim.g.remember_window_position = true
 
@@ -24,6 +24,8 @@ if vim.g.neovide then
 	--[[ vim.keymap.set("n", "<C-k>", "<C-u>", { silent = true }) ]]
 	--[[ vim.keymap.set("n", "<C-j>", "<C-d>", { silent = true }) ]]
 
-	vim.g.neovide_refresh_rate = 144
+	vim.g.neovide_refresh_rate = 165
 
+	-- Change working directory to the home directory
+	vim.api.nvim_command('cd ~/codes/')
 end

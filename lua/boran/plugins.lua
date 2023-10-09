@@ -124,6 +124,9 @@ return packer.startup(function(use)
 	--harpoon
 	use { 'ThePrimeagen/harpoon' }
 
+	--glsl syntax
+	use { 'tikhomirov/vim-glsl' }
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

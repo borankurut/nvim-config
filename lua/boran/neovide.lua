@@ -27,5 +27,5 @@ if vim.g.neovide then
 	vim.g.neovide_refresh_rate = 165
 
 	-- Change working directory to the home directory
-	vim.api.nvim_command('cd ~/codes/')
+	--vim.api.nvim_command('cd ~/codes/')
 end

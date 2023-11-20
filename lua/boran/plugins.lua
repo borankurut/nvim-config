@@ -127,6 +127,13 @@ return packer.startup(function(use)
 	--glsl syntax
 	use { 'tikhomirov/vim-glsl' }
 
+	use { 'zadirion/Unreal.nvim',
+		requires =
+		{
+			{ "tpope/vim-dispatch" }
+		}
+	}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

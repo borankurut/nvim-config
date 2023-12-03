@@ -1,3 +1,4 @@
+require "boran.gruvbox"
 vim.cmd "colorscheme gruvbox"
 
 require "boran.options"

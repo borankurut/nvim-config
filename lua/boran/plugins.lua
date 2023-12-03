@@ -48,7 +48,7 @@ return packer.startup(function(use)
 	use "numToStr/Comment.nvim" -- comment thingy.
 	use "JoosepAlviste/nvim-ts-context-commentstring"
 
-	use "morhetz/gruvbox" --colorscheme
+	use "ellisonleao/gruvbox.nvim" --colorscheme
 
 	--lsp
 	use {

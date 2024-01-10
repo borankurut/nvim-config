@@ -1,8 +1,12 @@
 -- :help options
 
+-- creates .clangd file that includes all the folders(and subfolders) inside src folder if src folder exist in the current folder. 
+vim.api.nvim_command("command! IncludeHeaders lua require('boran.clangdinclude').generate_clangd_file()")
+
 --opacity and some ruler stuf
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalF", { bg = "none" })
+
 vim.opt.laststatus = 2
 vim.opt.ruler = false
 vim.opt.number = false
@@ -56,5 +60,4 @@ vim.opt.cursorline = true
 vim.cmd [[
     hi CursorLine ctermbg=20 guibg=#1f1f1f
 ]]
-
 

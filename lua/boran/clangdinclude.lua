@@ -32,18 +32,24 @@ function M.generate_clangd_file()
 
 			--add the dir itself
             local dir_unix = string.gsub(src_path, '\\', '/')
-            clangd_content = clangd_content .. "\t  - -I" .. dir_unix .. "\n"
+            clangd_content = clangd_content .. "      - -I" .. dir_unix .. "\n"
 
 			--add the subdirs
             local subdirs = find_subdirectories(src_path)
             for _, subdir in ipairs(subdirs) do
                 local subdir_unix = string.gsub(subdir, '\\', '/')
-                clangd_content = clangd_content .. "\t  - -I" .. subdir_unix .. "\n"
+                clangd_content = clangd_content .. "      - -I" .. subdir_unix .. "\n"
             end
         else
             print("Warning: '" .. source_folder .. "' folder not found in the current directory.")
         end
     end
+
+	--don't write a .clangd file if folders doesn't exist
+	if #included_folders == 0 then
+		print("\nError: Could not create .clangd file.")
+		return
+	end
 
     local clangd_file_path = vim.fn.getcwd() .. '/.clangd'
     local file = io.open(clangd_file_path, 'w')

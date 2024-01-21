@@ -61,3 +61,23 @@ vim.cmd [[
     hi CursorLine ctermbg=20 guibg=#1f1f1f
 ]]
 
+local M = {}
+
+function M.set_cursorline_highlight()
+    vim.cmd [[
+        hi CursorLine ctermbg=20 guibg=#1f1f1f
+    ]]
+end
+
+M.set_cursorline_highlight()
+
+-- Autocommand to run the function when colorscheme changes
+vim.cmd [[
+    augroup CursorLineHighlight
+        autocmd!
+        autocmd ColorScheme * lua require('boran.options').set_cursorline_highlight()
+    augroup END
+]]
+
+return M
+

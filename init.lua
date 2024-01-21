@@ -1,5 +1,11 @@
 require "boran.gruvbox"
-vim.cmd "colorscheme gruvbox"
+require "boran.rosepine"
+--vim.cmd "colorscheme gruvbox"
+
+vim.cmd('colorscheme rose-pine-main')
+-- vim.cmd('colorscheme rose-pine-main')
+-- vim.cmd('colorscheme rose-pine-moon')
+-- vim.cmd('colorscheme rose-pine-dawn')
 
 require "boran.options"
 require "boran.plugins"

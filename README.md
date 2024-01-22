@@ -5,5 +5,4 @@ I followed this video series: https://www.youtube.com/playlist?list=PLhoH5vyxr6Q
 
 Very cool with terminal bacground:
 
-![Screenshot](https://github.com/borankurut/nvim-config/assets/66724695/110b6eaf-6a74-4547-8b56-b8afe4382e43)
-
+![Screenshot 2024-01-22 112553](https://github.com/borankurut/nvim-config/assets/66724695/5c65ff60-c285-42f0-ac10-1adf8be6994e)

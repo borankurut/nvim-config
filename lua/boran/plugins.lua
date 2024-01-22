@@ -85,9 +85,6 @@ return packer.startup(function(use)
 		run = "TSUpdate",
 	}
 
-	--[[ use "p00f/nvim-ts-rainbow" --rainbow brackets ]]
-	use "HiPhish/rainbow-delimiters.nvim"
-
 	--nvimtree
 	use "nvim-tree/nvim-web-devicons"
 

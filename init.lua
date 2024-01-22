@@ -11,7 +11,6 @@ require "boran.gitsigns"
 require "boran.keymaps"
 require "boran.neovide"
 require "boran.nvim-tree"
-require "boran.rainbow-delimiters"
 require "boran.toggleterm"
 require "boran.clangdinclude"
 

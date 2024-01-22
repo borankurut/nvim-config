@@ -5,6 +5,13 @@ local lsp = require('lsp-zero').preset({
     suggest_lsp_servers = false,
 })
 
+lsp.ensure_installed({
+  'lua_ls',
+  'clangd',
+  'pyright',
+  'omnisharp_mono'
+})
+
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr }
 

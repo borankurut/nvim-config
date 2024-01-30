@@ -88,6 +88,8 @@ return packer.startup(function(use)
 	--nvimtree
 	use "nvim-tree/nvim-web-devicons"
 
+	use "RRethy/vim-illuminate"
+
 	use {
 		"nvim-tree/nvim-tree.lua",
 		tag = "compat-nvim-0.7"

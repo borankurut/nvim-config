@@ -63,5 +63,38 @@ function M.generate_clangd_file()
 	end
 end
 
+
+function M.include_all_directories()
+    local clangd_content = "CompileFlags:\n\tAdd:\n"
+    local root_path = vim.fn.getcwd()
+
+    local all_dirs = find_subdirectories(root_path)
+
+    for _, dir in ipairs(all_dirs) do
+        if string.find(dir, "/%.")==nil and string.find(dir, "//%.")==nil and string.find(dir, "\\%.")==nil and string.find(dir, "\\\\%.")==nil then
+            local dir_unix = string.gsub(dir, '\\', '/')
+            clangd_content = clangd_content .. "      - -I" .. dir_unix .. "\n"
+        end
+    end
+
+    if #all_dirs == 0 then
+        print("\nError: No valid directories found in the current folder.")
+        return
+    end
+
+    local clangd_file_path = root_path .. '/.clangd'
+    local file = io.open(clangd_file_path, 'w')
+    file:write(clangd_content)
+    file:close()
+
+    print("Generated .clangd file")
+    print("Added folders: ")
+    for _, dir in ipairs(all_dirs) do
+        if string.find(dir, "/%.")==nil and string.find(dir, "//%.")==nil and string.find(dir, "\\%.")==nil and string.find(dir, "\\\\%.")==nil then
+            print("'" .. dir .. "'")
+        end
+    end
+end
+
 return M
 

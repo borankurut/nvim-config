@@ -64,19 +64,21 @@ vim.cmd [[
 
 local M = {}
 
-function M.set_cursorline_highlight()
+function M.after_colorscheme()
     vim.cmd [[
         hi CursorLine ctermbg=20 guibg=#1f1f1f
+		highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+		highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
     ]]
 end
 
-M.set_cursorline_highlight()
+M.after_colorscheme()
 
 -- Autocommand to run the function when colorscheme changes
 vim.cmd [[
     augroup CursorLineHighlight
         autocmd!
-        autocmd ColorScheme * lua require('boran.options').set_cursorline_highlight()
+        autocmd ColorScheme * lua require('boran.options').after_colorscheme()
     augroup END
 ]]
 

@@ -36,10 +36,13 @@ packer.init {
 			return require("packer.util").float { border = "rounded" }
 		end,
 	},
+	git = {
+		clone_timeout = 99999999999
+	}
 }
 
 -- Install your plugins here
-return packer.startup(function(use)
+return packer.startup({function(use)
 	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
@@ -142,4 +145,11 @@ return packer.startup(function(use)
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
-end)
+end,
+
+config = {
+	clone_timeout = 99999999999
+
+}
+
+})

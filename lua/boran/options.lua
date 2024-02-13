@@ -66,7 +66,7 @@ local M = {}
 
 function M.after_colorscheme()
     vim.cmd [[
-        hi CursorLine ctermbg=20 guibg=#151515
+        hi CursorLine ctermbg=20 guibg=#161616
 		highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 		highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
     ]]

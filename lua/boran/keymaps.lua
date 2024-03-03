@@ -17,18 +17,22 @@ keymap("n", "<M-l>", "<C-w>l", opts)
 --file navigation
 
 -- Create a custom function to execute zz and move 5 lines
-function CenterAndMoveUp()
-  vim.cmd('normal! zz')
-  vim.cmd('normal! 5k')
+function PeekUp()
+	vim.cmd('normal! 18k')
+	vim.cmd('normal! zz')
+	vim.cmd('normal! 5k')
 end
 
-function CenterAndMoveDown()
-  vim.cmd('normal! zz')
-  vim.cmd('normal! 5j')
+function PeekDown()
+	vim.cmd('normal! 18j')
+	if vim.fn.line("$") ~= vim.fn.line(".") then -- cursor is on the last line, don't center
+		vim.cmd('normal! zz')
+	end
+	vim.cmd('normal! 5j')
 end
 
-keymap("n", "<C-k>", "<C-u>:lua CenterAndMoveUp()<CR>", opts)
-keymap("n", "<C-j>", "<C-d>:lua CenterAndMoveDown()<CR>", opts)
+keymap("n", "<C-k>", ":lua PeekUp()<CR>", opts)
+keymap("n", "<C-j>", ":lua PeekDown()<CR>", opts)
 
 keymap("v", "<C-k>", "<C-u>", opts)
 keymap("v", "<C-j>", "<C-d>", opts)

@@ -35,7 +35,7 @@ toggleterm.setup({
 	persist_size = true,
 	direction = "horizontal",
 	close_on_exit = true,
-	shell = vim.o.shell,
+	shell = "pwsh",
 	float_opts = {
 		border = "curved",
 		winblend = 0,

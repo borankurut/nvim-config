@@ -50,5 +50,9 @@ lsp.set_sign_icons({
     info = '»',
 })
 
+lsp.configure('clangd', {
+	cmd = { "clangd", "--header-insertion=never"}
+})
+
 lsp.setup()
 

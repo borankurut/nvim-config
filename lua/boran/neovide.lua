@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.opt.guifont = { "JetBrains Mono", ":h12" }
+	vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h12" }
 	vim.g.remember_window_size = true
 	vim.g.remember_window_position = true
 
@@ -12,8 +12,8 @@ if vim.g.neovide then
 		end
 	end
 
-	vim.g.neovide_transparency = 0.88
-	vim.g.neovide_cursor_vfx_mode = "pixiedust"
+--	vim.g.neovide_transparency = 0.88
+--	vim.g.neovide_cursor_vfx_mode = "pixiedust"
 	vim.g.neovide_cursor_trail_size = 0.5
 
 	vim.g.neovide_fullscreen = true
@@ -27,5 +27,6 @@ if vim.g.neovide then
 	vim.g.neovide_refresh_rate = 165
 
 	-- Change working directory to the home directory
-	--vim.api.nvim_command('cd ~/codes/')
+	vim.api.nvim_command('cd ~')
+
 end

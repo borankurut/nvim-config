@@ -1,3 +1,5 @@
+local neovide_active = vim.g.neovide or false
+
 require('rose-pine').setup({
     variant = "auto", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
@@ -7,7 +9,7 @@ require('rose-pine').setup({
     styles = {
         bold = true,
         italic = true,
-        transparency = true,
+        transparency = not neovide_active,
     },
 
     groups = {

@@ -42,8 +42,9 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 vim.opt.undofile = true -- records history, don't do frequent changes to large files
 
-vim.opt.updatetime = 300
+vim.opt.updatetime = 100
 
+vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -65,23 +66,6 @@ vim.cmd [[
 local M = {}
 
 function M.after_colorscheme()
-    local current_colorscheme = vim.fn.execute('colorscheme'):match('([^%s]+)')
-    local new_line = "vim.cmd('colorscheme " .. current_colorscheme .. "')"
-
-
-	local init_lua_path = vim.fn.stdpath('config') .. '/init.lua'
-    local init_lua_lines = vim.fn.readfile(init_lua_path)
-
-    for i, line in ipairs(init_lua_lines) do
-        if line:find("colorscheme") and not line:find("%-%-") then
-            init_lua_lines[i] = new_line
-            break
-        end
-    end
-
-
-    vim.fn.writefile(init_lua_lines, init_lua_path)
-
     vim.cmd [[
         hi CursorLine ctermbg=20 guibg=#161616
 		highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

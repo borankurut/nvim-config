@@ -9,13 +9,13 @@ require "boran.autopairs"
 require "boran.comment"
 require "boran.gitsigns"
 require "boran.keymaps"
-require "boran.neovide"
 require "boran.nvim-tree"
 require "boran.toggleterm"
 require "boran.clangdinclude"
 require "boran.illuminate"
 
 require "boran.rosepine"
+require "boran.neovide"
 
 vim.cmd('colorscheme rose-pine')
 -- vim.cmd('colorscheme rose-pine-main')

@@ -72,6 +72,13 @@ function M.after_colorscheme()
 		highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 		highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
     ]]
+
+	if vim.g.neovide then
+		vim.cmd[[highlight Normal guibg=#000000]]
+		vim.cmd[[highlight NvimTreeNormal guibg=#000000]]
+	end
+	-- change background to black because neovide goes weird
+
 end
 
 M.after_colorscheme()

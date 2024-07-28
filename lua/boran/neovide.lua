@@ -12,7 +12,11 @@ if vim.g.neovide then
 		end
 	end
 
---	vim.g.neovide_transparency = 0.88
+	vim.cmd('highlight Normal guibg=#000000')
+
+	vim.g.neovide_transparency = 0.99
+	vim.g.neovide_background_transparency = 0
+	vim.g.neovide_background_image = "C:\\Users\\boran\\Pictures\\neovide\\q.jpg"
 --	vim.g.neovide_cursor_vfx_mode = "pixiedust"
 	vim.g.neovide_cursor_trail_size = 0.5
 

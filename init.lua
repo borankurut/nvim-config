@@ -13,7 +13,7 @@ require "boran.nvim-tree"
 require "boran.toggleterm"
 require "boran.clangdinclude"
 require "boran.illuminate"
-
+require "boran.matchparen"
 require "boran.rosepine"
 require "boran.neovide"
 

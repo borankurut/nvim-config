@@ -9,7 +9,6 @@ lsp.ensure_installed({
   'lua_ls',
   'clangd',
   'pyright',
-  'omnisharp_mono'
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -25,7 +24,18 @@ lsp.on_attach(function(client, bufnr)
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
         vim.lsp.diagnostic.on_publish_diagnostics, {
             virtual_text = {
-                prefix = "",
+                prefix = function(diagnostic)
+					if diagnostic.severity == vim.diagnostic.severity.ERROR then
+						return '✘'
+					elseif diagnostic.severity == vim.diagnostic.severity.WARN then
+						return '▲'
+					elseif diagnostic.severity == vim.diagnostic.severity.INFO then
+						return '»'
+					else
+						return '⚑'
+					end
+				end,
+
                 spacing = 2,
             },
             signs = true,
@@ -55,4 +65,3 @@ lsp.configure('clangd', {
 })
 
 lsp.setup()
-

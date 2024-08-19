@@ -80,7 +80,7 @@ nvim_tree.setup {
 		timeout = 500,
 	},
 	view = {
-		width = 30,
+		width = 50,
 		hide_root_folder = false,
 		side = "left",
 		mappings = {
@@ -88,7 +88,7 @@ nvim_tree.setup {
 			list = {
 				--{ key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
 				--{ key = "h", cb = tree_cb "close_node" },
-				{ key = "v",     cb = tree_cb "vsplit" },
+				--[[ { key = "v",     cb = tree_cb "vsplit" }, ]]
 				{ key = "<C-k>", cb = "<C-u>" }, --disable nvimtree ctrl k
 			},
 		},

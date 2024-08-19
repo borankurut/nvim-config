@@ -3,7 +3,6 @@ vim.cmd([[
 ]])
 
 vim.cmd([[
-
 	command! PrettyCurly %s/)\(\s*\n\s*{\)/){/g
 ]])
 

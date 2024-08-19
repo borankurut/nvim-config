@@ -98,7 +98,6 @@ return packer.startup({function(use)
 		tag = "compat-nvim-0.7"
 	}
 
-
 	use "lewis6991/gitsigns.nvim"
 
 	--tabs
@@ -107,21 +106,8 @@ return packer.startup({function(use)
 	--terminal
 	use "akinsho/toggleterm.nvim"
 
-
 	--cursor animation
 	use { 'edluffy/specs.nvim' }
-
-	-- for c# projects
-	use { 'OmniSharp/omnisharp-vim' }
-
-	--to access recent files
-	use {
-		'goolord/alpha-nvim',
-		config = function()
-			require 'alpha'.setup(require 'alpha.themes.startify'.config)
-		end
-	}
-
 
 	--harpoon
 	use { 'ThePrimeagen/harpoon' }
@@ -138,8 +124,6 @@ return packer.startup({function(use)
 
 	use {'rose-pine/neovim'}
 
-	use { 'eandrju/cellular-automaton.nvim' }
-
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
@@ -149,7 +133,6 @@ end,
 
 config = {
 	clone_timeout = 99999999999
-
 }
 
 })

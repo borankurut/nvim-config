@@ -55,8 +55,7 @@ require('illuminate').configure({
     case_insensitive_regex = false,
 })
 
-vim.api.nvim_exec([[hi IlluminatedWordText guibg=#4f4f4f gui=bold]], false)
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = "#4f4f4f", bold = true })
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "IlluminatedWordText" })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "IlluminatedWordText" })
 
-vim.api.nvim_exec([[hi def link IlluminatedWordRead IlluminatedWordText]], false)
-
-vim.api.nvim_exec([[hi def link IlluminatedWordWrite IlluminatedWordText]], false)

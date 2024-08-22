@@ -42,7 +42,7 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 vim.opt.undofile = true -- records history, don't do frequent changes to large files
 
-vim.opt.updatetime = 100
+vim.opt.updatetime = 750 -- solves syntax glitches?
 
 vim.opt.expandtab = false
 vim.opt.softtabstop = 4

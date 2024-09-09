@@ -16,6 +16,7 @@ require "boran.illuminate"
 require "boran.matchparen"
 require "boran.rosepine"
 require "boran.neovide"
+require "boran.todo"
 
 vim.cmd('colorscheme rose-pine')
 -- vim.cmd('colorscheme rose-pine-main')

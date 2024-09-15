@@ -83,10 +83,11 @@ return packer.startup({function(use)
 	use "nvim-telescope/telescope-media-files.nvim"
 
 	--treesitter
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		run = "TSUpdate",
-	}
+	--[[ use { ]]
+	--[[ 	"nvim-treesitter/nvim-treesitter", ]]
+	--[[ 	run = "TSUpdate", ]]
+	--[[ } ]]
+	-- TODO: solve treesitter highlighting lag.	
 
 	--nvimtree
 	use "nvim-tree/nvim-web-devicons"

@@ -4,7 +4,8 @@ require "boran.options"
 require "boran.commands"
 require "boran.lsp"
 require "boran.telescope"
-require "boran.treesitter"
+--[[ require "boran.treesitter" ]]
+-- TODO: solve highlighting lag.
 require "boran.autopairs"
 require "boran.comment"
 require "boran.gitsigns"

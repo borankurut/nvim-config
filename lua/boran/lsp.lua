@@ -45,7 +45,7 @@ lsp.on_attach(function(client, bufnr)
 
     -- Add keybindings
     vim.keymap.set('n', 'gk', '<cmd>lua vim.diagnostic.open_float({ focusable = true })<cr>', opts)
-    vim.keymap.set('n', 'gl', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+    vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
     vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
     vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
     -- more keybindings...

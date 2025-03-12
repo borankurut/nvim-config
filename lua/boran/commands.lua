@@ -2,7 +2,10 @@ vim.cmd([[
   command! Removem %s/\r//g
 ]])
 
-vim.cmd([[
-	command! PrettyCurly %s/)\(\s*\n\s*{\)/){/g
-]])
-
+--prettier
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	callback = function()
+		vim.lsp.buf.format({ async = false })
+	end,
+})

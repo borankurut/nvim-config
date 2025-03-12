@@ -36,7 +36,7 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 -- Disable status line for NvimTree buffer
-vim.cmd[[
+vim.cmd [[
 	autocmd BufEnter NvimTree_1 setlocal statusline=%#Normal#
 ]]
 
@@ -108,5 +108,3 @@ nvim_tree.setup {
 		},
 	},
 }
-
-

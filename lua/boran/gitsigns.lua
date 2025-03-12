@@ -15,7 +15,6 @@ gitsigns.setup({
 
 		--mappings
 		map('n', '<leader>g', gs.toggle_signs)
-
 	end,
 	signs = {
 		add = { text = "▎" },

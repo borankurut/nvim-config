@@ -17,7 +17,7 @@ if vim.g.neovide then
 	vim.g.neovide_transparency = 0.99
 	vim.g.neovide_background_transparency = 0
 	vim.g.neovide_background_image = "C:\\Users\\boran\\Pictures\\neovide\\q.jpg"
---	vim.g.neovide_cursor_vfx_mode = "pixiedust"
+	--	vim.g.neovide_cursor_vfx_mode = "pixiedust"
 	vim.g.neovide_cursor_trail_size = 0.5
 
 	vim.g.neovide_fullscreen = true
@@ -32,5 +32,4 @@ if vim.g.neovide then
 
 	-- Change working directory to the home directory
 	vim.api.nvim_command('cd ~')
-
 end

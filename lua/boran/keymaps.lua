@@ -84,13 +84,10 @@ vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true })
 --prettier
 vim.keymap.set("n", "<leader>p", vim.lsp.buf.format)
 
--- don't waste lines.
-keymap("n", "<leader>[", ":PrettyCurly<CR>", opts)
-
 --save file by leader s.
 keymap("n", "<leader>s", ":w<cr>", opts)
 
---redo 
+--redo
 keymap("n", "r", "<C-r>", opts)
 
 keymap("n", "<leader>v", ":vsplit<cr>", opts)

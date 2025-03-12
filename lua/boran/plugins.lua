@@ -42,100 +42,101 @@ packer.init {
 }
 
 -- Install your plugins here
-return packer.startup({function(use)
-	-- My plugins here
-	use "wbthomason/packer.nvim" -- Have packer manage itself
-	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-	use "windwp/nvim-autopairs" --autoparis
-	use "numToStr/Comment.nvim" -- comment thingy.
-	use "JoosepAlviste/nvim-ts-context-commentstring"
+return packer.startup({
+	function(use)
+		-- My plugins here
+		use "wbthomason/packer.nvim" -- Have packer manage itself
+		use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+		use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+		use "windwp/nvim-autopairs" --autoparis
+		use "numToStr/Comment.nvim" -- comment thingy.
+		use "JoosepAlviste/nvim-ts-context-commentstring"
 
-	use "ellisonleao/gruvbox.nvim" --colorscheme
+		use "ellisonleao/gruvbox.nvim" --colorscheme
 
-	--lsp
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v1.x',
-		requires = {
-			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },    -- Required
-			{ 'williamboman/mason.nvim' },  -- Optional
-			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
+		--lsp
+		use {
+			'VonHeikemen/lsp-zero.nvim',
+			branch = 'v1.x',
+			requires = {
+				-- LSP Support
+				{ 'neovim/nvim-lspconfig' }, -- Required
+				{ 'williamboman/mason.nvim' }, -- Optional
+				{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' }, -- Required
-			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-			{ 'hrsh7th/cmp-buffer' }, -- Optional
-			{ 'hrsh7th/cmp-path' }, -- Optional
-			{ 'saadparwaiz1/cmp_luasnip' }, -- Optional
-			{ 'hrsh7th/cmp-nvim-lua' }, -- Optional
+				-- Autocompletion
+				{ 'hrsh7th/nvim-cmp' }, -- Required
+				{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
+				{ 'hrsh7th/cmp-buffer' }, -- Optional
+				{ 'hrsh7th/cmp-path' }, -- Optional
+				{ 'saadparwaiz1/cmp_luasnip' }, -- Optional
+				{ 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
-			-- Snippets
-			{ 'L3MON4D3/LuaSnip' },    -- Required
-			{ 'rafamadriz/friendly-snippets' }, -- Optional
+				-- Snippets
+				{ 'L3MON4D3/LuaSnip' }, -- Required
+				{ 'rafamadriz/friendly-snippets' }, -- Optional
+			}
 		}
-	}
 
 
-	-- telescope
-	use "nvim-telescope/telescope.nvim"
-	use "nvim-telescope/telescope-media-files.nvim"
+		-- telescope
+		use "nvim-telescope/telescope.nvim"
+		use "nvim-telescope/telescope-media-files.nvim"
 
-	--treesitter
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		run = "TSUpdate",
-	}
-	-- TODO: solve treesitter highlighting lag.	
-
-	--nvimtree
-	use "nvim-tree/nvim-web-devicons"
-
-	use "RRethy/vim-illuminate"
-
-	use {
-		"nvim-tree/nvim-tree.lua",
-		tag = "compat-nvim-0.7"
-	}
-
-	use "lewis6991/gitsigns.nvim"
-
-	--tabs
-	use "moll/vim-bbye"
-
-	--terminal
-	use "akinsho/toggleterm.nvim"
-
-	--cursor animation
-	use { 'edluffy/specs.nvim' }
-
-	--harpoon
-	use { 'ThePrimeagen/harpoon' }
-
-	--glsl syntax
-	use { 'tikhomirov/vim-glsl' }
-
-	use { 'zadirion/Unreal.nvim',
-		requires =
-		{
-			{ "tpope/vim-dispatch" }
+		--treesitter
+		use {
+			"nvim-treesitter/nvim-treesitter",
+			run = "TSUpdate",
 		}
+		-- TODO: solve treesitter highlighting lag.	
+
+		--nvimtree
+		use "nvim-tree/nvim-web-devicons"
+
+		use "RRethy/vim-illuminate"
+
+		use {
+			"nvim-tree/nvim-tree.lua",
+			tag = "compat-nvim-0.7"
+		}
+
+		use "lewis6991/gitsigns.nvim"
+
+		--tabs
+		use "moll/vim-bbye"
+
+		--terminal
+		use "akinsho/toggleterm.nvim"
+
+		--cursor animation
+		use { 'edluffy/specs.nvim' }
+
+		--harpoon
+		use { 'ThePrimeagen/harpoon' }
+
+		--glsl syntax
+		use { 'tikhomirov/vim-glsl' }
+
+		use { 'zadirion/Unreal.nvim',
+			requires =
+			{
+				{ "tpope/vim-dispatch" }
+			}
+		}
+
+		use { 'rose-pine/neovim' }
+
+		use { 'monkoose/matchparen.nvim' }
+
+		-- Automatically set up your configuration after cloning packer.nvim
+		-- Put this at the end after all plugins
+		if PACKER_BOOTSTRAP then
+			require("packer").sync()
+		end
+	end,
+
+	config = {
+		clone_timeout = 99999999999
 	}
-
-	use {'rose-pine/neovim'}
-
-	use {'monkoose/matchparen.nvim'}
-
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
-end,
-
-config = {
-	clone_timeout = 99999999999
-}
 
 })

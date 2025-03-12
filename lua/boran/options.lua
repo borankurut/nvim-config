@@ -1,6 +1,6 @@
 -- :help options
 
--- creates .clangd file that includes all the folders(and subfolders) inside src folder if src folder exist in the current folder. 
+-- creates .clangd file that includes all the folders(and subfolders) inside src folder if src folder exist in the current folder.
 vim.api.nvim_command("command! IncludeHeaders lua require('boran.clangdinclude').generate_clangd_file()")
 vim.api.nvim_command("command! IncludeHeadersAll lua require('boran.clangdinclude').include_all_directories()")
 
@@ -40,7 +40,7 @@ vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.splitright = true
 vim.opt.termguicolors = true
-vim.opt.undofile = true -- records history, don't do frequent changes to large files
+vim.opt.undofile = true  -- records history, don't do frequent changes to large files
 
 vim.opt.updatetime = 750 -- solves syntax glitches?
 
@@ -69,18 +69,17 @@ vim.cmd [[
 local M = {}
 
 function M.after_colorscheme()
-    vim.cmd [[
+	vim.cmd [[
         hi CursorLine ctermbg=20 guibg=#161616
 		highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 		highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
     ]]
 
 	if vim.g.neovide then
-		vim.cmd[[highlight Normal guibg=#000000]]
-		vim.cmd[[highlight NvimTreeNormal guibg=#000000]]
+		vim.cmd [[highlight Normal guibg=#000000]]
+		vim.cmd [[highlight NvimTreeNormal guibg=#000000]]
 	end
 	-- change background to black because neovide goes weird
-
 end
 
 M.after_colorscheme()
@@ -94,4 +93,3 @@ vim.cmd [[
 ]]
 
 return M
-

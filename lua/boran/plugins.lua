@@ -46,13 +46,9 @@ return packer.startup({
 	function(use)
 		-- My plugins here
 		use "wbthomason/packer.nvim" -- Have packer manage itself
-		use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 		use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 		use "windwp/nvim-autopairs" --autoparis
 		use "numToStr/Comment.nvim" -- comment thingy.
-		use "JoosepAlviste/nvim-ts-context-commentstring"
-
-		use "ellisonleao/gruvbox.nvim" --colorscheme
 
 		--lsp
 		use {
@@ -108,21 +104,11 @@ return packer.startup({
 		--terminal
 		use "akinsho/toggleterm.nvim"
 
-		--cursor animation
-		use { 'edluffy/specs.nvim' }
-
 		--harpoon
 		use { 'ThePrimeagen/harpoon' }
 
 		--glsl syntax
 		use { 'tikhomirov/vim-glsl' }
-
-		use { 'zadirion/Unreal.nvim',
-			requires =
-			{
-				{ "tpope/vim-dispatch" }
-			}
-		}
 
 		use { 'rose-pine/neovim' }
 

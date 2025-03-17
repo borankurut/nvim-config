@@ -16,10 +16,9 @@ require "boran.clangdinclude"
 require "boran.illuminate"
 require "boran.matchparen"
 require "boran.rosepine"
+require "boran.vague"
 require "boran.neovide"
 require "boran.todo"
 
-vim.cmd('colorscheme rose-pine')
--- vim.cmd('colorscheme rose-pine-main')
--- vim.cmd('colorscheme rose-pine-moon')
--- vim.cmd('colorscheme rose-pine-dawn')
+vim.cmd('colorscheme vague')
+--[[ vim.cmd('colorscheme rose-pine') ]]

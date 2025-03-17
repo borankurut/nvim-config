@@ -124,7 +124,11 @@ return packer.startup({
 			}
 		}
 
+
 		use { 'rose-pine/neovim' }
+
+		use { 'vague2k/vague.nvim' }
+
 
 		use { 'monkoose/matchparen.nvim' }
 

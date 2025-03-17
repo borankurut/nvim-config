@@ -17,11 +17,14 @@ keymap("n", "<M-l>", "<C-w>l", opts)
 --file navigation
 
 
--- Map 'gh' to go to the beginning of the line (first non-blank character)
 vim.api.nvim_set_keymap('n', 'gh', '^', { noremap = true, silent = true })
-
--- Map 'gl' to go to the end of the line (last non-blank character)
 vim.api.nvim_set_keymap('n', 'gl', 'g_', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('v', 'gh', '^', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'gl', 'g_', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('o', 'gh', '^', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('o', 'gl', 'g_', { noremap = true, silent = true })
 
 -- Create a custom function to execute zz and move 5 lines
 function PeekUp()

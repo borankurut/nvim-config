@@ -1,4 +1,3 @@
-vim.cmd('syntax enable')
 vim.cmd([[
   augroup TodoHighlight
     autocmd!

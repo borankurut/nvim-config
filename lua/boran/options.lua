@@ -12,6 +12,8 @@ vim.opt.laststatus = 2
 vim.opt.ruler = false
 vim.opt.number = false
 
+vim.cmd('syntax off')
+
 vim.cmd [[
   highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

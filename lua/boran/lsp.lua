@@ -9,6 +9,7 @@ lsp.ensure_installed({
 	'lua_ls',
 	'clangd',
 	'pyright',
+	'mesonlsp',
 })
 
 lsp.on_attach(function(client, bufnr)

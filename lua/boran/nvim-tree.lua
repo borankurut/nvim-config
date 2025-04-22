@@ -62,8 +62,8 @@ nvim_tree.setup {
 		},
 	},
 	update_focused_file = {
-		enable = true,
-		update_cwd = true,
+		enable = false,
+		update_cwd = false,
 		ignore_list = {},
 	},
 	system_open = {

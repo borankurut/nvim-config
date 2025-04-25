@@ -48,7 +48,9 @@ return packer.startup({
 		use "wbthomason/packer.nvim" -- Have packer manage itself
 		use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 		use "windwp/nvim-autopairs" --autoparis
-		use "numToStr/Comment.nvim" -- comment thingy.
+
+		use 'numToStr/Comment.nvim'
+		use 'JoosepAlviste/nvim-ts-context-commentstring'
 
 		--lsp
 		use {

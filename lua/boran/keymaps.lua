@@ -10,9 +10,8 @@ vim.g.maplocalleader = " "
 --window navigation
 keymap("n", "<M-h>", "<C-w>h", opts)
 keymap("n", "<M-l>", "<C-w>l", opts)
-
---[[ keymap("n", "<C-j>", "<C-w>j", opts) ]]
---[[ keymap("n", "<C-k>", "<C-w>k", opts) ]]
+keymap("n", "<M-j>", "<C-w>j", opts)
+keymap("n", "<M-k>", "<C-w>k", opts)
 
 --file navigation
 
@@ -59,8 +58,8 @@ keymap("v", "<TAB>", ">gv", opts)
 keymap("v", "<S-TAB>", "<gv", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", ":m .+1<CR>==", opts)
-keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+--[[ keymap("n", "<A-j>", ":m .+1<CR>==", opts) ]]
+--[[ keymap("n", "<A-k>", ":m .-2<CR>==", opts) ]]
 keymap("v", "<", "<gv^", opts)
 keymap("v", ">", ">gv^", opts)
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)

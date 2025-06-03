@@ -74,8 +74,7 @@ end
 -- 4) Map Alt+; and Alt+l in both NORMAL and TERMINAL modes
 local opts = { noremap = true, silent = true }
 vim.keymap.set({ "n", "t" }, "<M-;>", [[<C-\><C-n>:lua _PWSH_TOGGLE()<CR>]], opts)
-vim.keymap.set({ "n", "t" }, "<M-l>", [[<C-\><C-n>:lua _VSVSCMD_TOGGLE()<CR>]], opts)
-
+vim.keymap.set({ "n", "t" }, "<M-'>", [[<C-\><C-n>:lua _VSVSCMD_TOGGLE()<CR>]], opts)
 vim.cmd([[
   augroup TerminalInsertEscape
     autocmd!

@@ -48,9 +48,6 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, opts)
 	vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
 	vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, opts)
-	vim.keymap.set('n', '<leader>f', function()
-		vim.lsp.buf.format({ async = true })
-	end, opts)
 end)
 
 vim.diagnostic.config({

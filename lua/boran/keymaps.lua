@@ -4,14 +4,19 @@ local keymap = vim.api.nvim_set_keymap
 
 --make leader key space
 keymap("", "<Space>", "<Nop>", opts)
+
+keymap("n", "<C-j>", "<Nop>", opts)
+keymap("n", "<C-h>", "<Nop>", opts)
+keymap("n", "<C-l>", "<Nop>", opts)
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 --window navigation
-keymap("n", "<M-h>", "<C-w>h", opts)
-keymap("n", "<M-l>", "<C-w>l", opts)
-keymap("n", "<M-j>", "<C-w>j", opts)
-keymap("n", "<M-k>", "<C-w>k", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
 
 --file navigation
 
@@ -40,11 +45,11 @@ function PeekDown()
 	vim.cmd('normal! 5j')
 end
 
-keymap("n", "<C-k>", ":lua PeekUp()<CR>", opts)
-keymap("n", "<C-j>", ":lua PeekDown()<CR>", opts)
+keymap("n", "<A-k>", ":lua PeekUp()<CR>", opts)
+keymap("n", "<A-j>", ":lua PeekDown()<CR>", opts)
 
-keymap("v", "<C-k>", "<C-u>", opts)
-keymap("v", "<C-j>", "<C-d>", opts)
+keymap("v", "<A-k>", "<C-u>", opts)
+keymap("v", "<A-j>", "<C-d>", opts)
 
 --explorer window
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -62,8 +67,8 @@ keymap("v", "<S-TAB>", "<gv", opts)
 --[[ keymap("n", "<A-k>", ":m .-2<CR>==", opts) ]]
 keymap("v", "<", "<gv^", opts)
 keymap("v", ">", ">gv^", opts)
-keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "<C-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<C-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- telescope
 --vim.keymap.set("n", "<leader>j", builtin.find_files, {})

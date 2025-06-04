@@ -52,7 +52,7 @@ keymap("v", "<A-k>", "<C-u>", opts)
 keymap("v", "<A-j>", "<C-d>", opts)
 
 --explorer window
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
 --escape jk
 keymap("i", "jk", "<ESC>", opts)

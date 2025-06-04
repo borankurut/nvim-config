@@ -1,6 +1,17 @@
 require('neodev').setup()
 require('mason').setup({})
 
+
+local cmp = require('cmp')
+
+cmp.setup({
+	mapping = cmp.mapping.preset.insert({
+		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Enter confirms selection
+		['<Tab>'] = cmp.mapping.select_next_item(),
+		['<S-Tab>'] = cmp.mapping.select_prev_item(),
+	}),
+})
+
 require('mason-lspconfig').setup({
 	ensure_installed = { 'lua_ls', 'clangd', 'pyright', 'mesonlsp' },
 	handlers = {

@@ -4,10 +4,6 @@
 vim.api.nvim_command("command! IncludeHeaders lua require('boran.clangdinclude').generate_clangd_file()")
 vim.api.nvim_command("command! IncludeHeadersAll lua require('boran.clangdinclude').include_all_directories()")
 
---opacity and some ruler stuf
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalF", { bg = "none" })
-
 vim.opt.laststatus = 2
 vim.opt.ruler = false
 vim.opt.number = false
@@ -32,7 +28,7 @@ vim.o.signcolumn = "number"
 
 vim.opt.backup = false
 vim.opt.clipboard = "unnamedplus" --for ctrl-c and v to work.
-vim.opt.cmdheight = 2
+vim.opt.cmdheight = 1
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0
 vim.opt.fileencoding = "utf-8"
@@ -75,13 +71,11 @@ function M.after_colorscheme()
         hi CursorLine ctermbg=20 guibg=#161616
 		highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 		highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+		highlight Normal guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+		highlight NormalNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+		highlight NormalF guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+		highlight VertSplit guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
     ]]
-
-	if vim.g.neovide then
-		vim.cmd [[highlight Normal guibg=#000000]]
-		vim.cmd [[highlight NvimTreeNormal guibg=#000000]]
-	end
-	-- change background to black because neovide goes weird
 end
 
 M.after_colorscheme()

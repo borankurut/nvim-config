@@ -43,9 +43,8 @@ local powershell = Terminal:new({
 })
 
 local vs_dev = Terminal:new({
-	cmd       =
-	[[pwsh -NoExit -Command "cmd /c '\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat\" x64'"]],
-	hidden    = true,
+	cmd = [[cmd /k ""C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat"" x64]],
+	hidden = true,
 	direction = "horizontal",
 })
 

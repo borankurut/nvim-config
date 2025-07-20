@@ -59,6 +59,11 @@ vim.opt.cursorline = true
 
 vim.g.loaded_matchparen = 1
 
+vim.cmd [[
+	set ignorecase  " Case-insensitive everywhere
+	set smartcase   " Case-sensitive only if search contains uppercase
+]]
+
 --set the hexadecimal color for line highlighting
 vim.cmd [[
     hi CursorLine ctermbg=20 guibg=#1f1f1f

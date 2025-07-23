@@ -13,7 +13,8 @@ cmp.setup({
 })
 
 require('mason-lspconfig').setup({
-	ensure_installed = { 'lua_ls', 'clangd', 'pyright', 'mesonlsp' },
+	ensure_installed = { 'lua_ls', 'clangd', 'pyright', 'mesonlsp', 'black', 'glsl_analyzer' },
+
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({})

@@ -51,7 +51,7 @@ vim.opt.smarttab = true
 vim.o.autochdir = false
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 vim.opt.wrap = false
 

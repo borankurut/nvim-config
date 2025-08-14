@@ -1,8 +1,6 @@
 -- :help options
-
--- creates .clangd file that includes all the folders(and subfolders) inside src folder if src folder exist in the current folder.
-vim.api.nvim_command("command! IncludeHeaders lua require('boran.clangdinclude').generate_clangd_file()")
-vim.api.nvim_command("command! IncludeHeadersAll lua require('boran.clangdinclude').include_all_directories()")
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 vim.opt.laststatus = 2
 vim.opt.ruler = false

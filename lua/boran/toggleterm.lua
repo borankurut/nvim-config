@@ -44,7 +44,7 @@ local powershell = Terminal:new({
 
 local vs_dev = Terminal:new({
 	cmd =
-	[[powershell.exe -NoExit -Command "& { cmd /c '\"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat\" x64 && set' | ForEach-Object { if ($_ -match '^(\w+)=(.*)$') { [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2]) } }; Write-Host 'MSVC env imported into PowerShell.' }"]],
+	[[pwsh.exe -NoExit -Command "& { cmd /c '\"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat\" x64 && set' | ForEach-Object { if ($_ -match '^(\w+)=(.*)$') { [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2]) } }; Write-Host 'MSVC env imported into PowerShell.' }"]],
 	hidden = true,
 	direction = "horizontal",
 })

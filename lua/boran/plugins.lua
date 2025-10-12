@@ -52,32 +52,28 @@ return packer.startup({
 		use 'numToStr/Comment.nvim'
 		use 'JoosepAlviste/nvim-ts-context-commentstring'
 
-		--lsp
+		-- lsp
 		use {
-			'VonHeikemen/lsp-zero.nvim',
-			branch = 'v3.x', -- Changed from v1.x
-			requires = {
-				-- LSP Core
-				{ 'neovim/nvim-lspconfig' },
-				{ 'williamboman/mason.nvim' },
-				{ 'williamboman/mason-lspconfig.nvim' },
+			-- core LSP support
+			{ 'neovim/nvim-lspconfig' },
+			{ 'williamboman/mason.nvim' },
+			{ 'williamboman/mason-lspconfig.nvim' },
 
-				-- Autocompletion
-				{ 'hrsh7th/nvim-cmp' },
-				{ 'hrsh7th/cmp-nvim-lsp' },
-				{ 'hrsh7th/cmp-buffer' },
-				{ 'hrsh7th/cmp-path' },
-				{ 'saadparwaiz1/cmp_luasnip' },
-				{ 'hrsh7th/cmp-nvim-lua' },
+			-- completion
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'hrsh7th/cmp-buffer' },
+			{ 'hrsh7th/cmp-path' },
+			{ 'saadparwaiz1/cmp_luasnip' },
+			{ 'hrsh7th/cmp-nvim-lua' },
 
-				-- Snippets
-				{ 'L3MON4D3/LuaSnip' },
-				{ 'rafamadriz/friendly-snippets' },
+			-- snippets
+			{ 'L3MON4D3/LuaSnip' },
+			{ 'rafamadriz/friendly-snippets' },
 
-				-- NEW REQUIRED PLUGINS for v4.x
-				{ 'folke/neodev.nvim' },                   -- Essential for Lua LSP
-				{ 'j-hui/fidget.nvim',                tag = 'legacy' } -- UI integration
-			}
+			-- extras
+			{ 'folke/neodev.nvim' }, -- better Lua support for Neovim config
+			{ 'j-hui/fidget.nvim' }, -- LSP status UI
 		}
 
 		-- telescope

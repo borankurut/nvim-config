@@ -15,8 +15,8 @@ local cmp = require('cmp')
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		['<CR>']    = cmp.mapping.confirm({ select = true }), -- Enter to confirm
-		['<Tab>']   = cmp.mapping.select_next_item(),    -- Tab to next item
-		['<S-Tab>'] = cmp.mapping.select_prev_item(),    -- Shift-Tab to prev
+		['<Tab>']   = cmp.mapping.select_next_item(),   -- Tab to next item
+		['<S-Tab>'] = cmp.mapping.select_prev_item(),   -- Shift-Tab to prev
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
@@ -64,7 +64,7 @@ vim.lsp.config("lua_ls", {
 	-- (Neodev will auto-add Neovim runtime; no need to specify library manually)
 })
 vim.lsp.config("pyright", { capabilities = lsp_capabilities, on_attach = lsp_on_attach })
-vim.lsp.config("mesonlsp", { capabilities = lsp_capabilities, on_attach = lsp_on_attach })
+vim.lsp.config("meson", { capabilities = lsp_capabilities, on_attach = lsp_on_attach })
 vim.lsp.config("glsl_analyzer", { capabilities = lsp_capabilities, on_attach = lsp_on_attach })
 
 -- 6. Enable the LSP servers

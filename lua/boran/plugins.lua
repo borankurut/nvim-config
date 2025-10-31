@@ -121,6 +121,9 @@ return packer.startup({
 
 		use { 'monkoose/matchparen.nvim' }
 
+		use { 'seblyng/roslyn.nvim' }
+		use { 'apyra/nvim-unity-sync' }
+
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then

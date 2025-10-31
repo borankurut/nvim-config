@@ -4,7 +4,12 @@
 require('neodev').setup({}) -- (optional but recommended if you edit Neovim config in Lua)
 
 -- 2. Mason and Mason-Lspconfig initialization
-require('mason').setup()
+require("mason").setup({
+	registries = {
+		"github:mason-org/mason-registry",
+		"github:Crashdummyy/mason-registry",
+	},
+})
 require('mason-lspconfig').setup({
 	ensure_installed = { "lua_ls", "clangd", "pyright", "mesonlsp", "glsl_analyzer" },
 	automatic_enable = false, -- we'll manually enable after setting configs
@@ -67,12 +72,29 @@ vim.lsp.config("pyright", { capabilities = lsp_capabilities, on_attach = lsp_on_
 vim.lsp.config("meson", { capabilities = lsp_capabilities, on_attach = lsp_on_attach })
 vim.lsp.config("glsl_analyzer", { capabilities = lsp_capabilities, on_attach = lsp_on_attach })
 
+vim.lsp.config("roslyn", {
+	capabilities = lsp_capabilities,
+	on_attach = lsp_on_attach,
+	settings = {
+		["csharp|background_analysis"] = {
+			dotnet_analyzer_diagnostics_scope = "openFiles",
+			dotnet_compiler_diagnostics_scope = "openFiles",
+		},
+		["csharp|inlay_hints"] = {}, -- nuke inlay hints for now
+		["csharp|symbol_search"] = {
+			dotnet_search_reference_assemblies = false,
+		},
+	},
+})
+
 -- 6. Enable the LSP servers
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("mesonlsp")
 vim.lsp.enable("glsl_analyzer")
+vim.lsp.enable("roslyn")
+require("unity.plugin").setup()
 
 -- 7. Configure diagnostics (signs and virtual text icons)
 vim.diagnostic.config({
